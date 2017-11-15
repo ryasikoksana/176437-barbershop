@@ -9,7 +9,7 @@
       <div class="container">
         <nav class="main-nav">
           <a class="logo" href="index.html">
-            <img src="img/logo2.png" width="111" height="24" alt="Логотип">
+            <img src="img/logo.svg" width="111" height="24" alt="Логотип Барбершоп «Бородинский»">
           </a>
           <ul>
             <li>
@@ -49,24 +49,24 @@
         <li class="breadcrumbs-active">Набор для путешествий «BAXTER OF CALIFORNIA»</li>
       </ul>
       <div class="product-photo">
-        <h2 class="title-hidden">Изображения товара</h2>
+        <h2 class="visually-hidden">Изображения товара</h2>
         <div class="product-photo-full">
-          <img src="img/photo-1.jpg" width="460" height="498" alt="Фото набора">
+          <img src="img/catalog-item-1.jpg" width="460" height="498" alt="Фото набора для путешествий «BAXTER OF CALIFORNIA»">
         </div>
         <ul class="product-photo-preview">
           <li>
-            <img src="img/photo-2.jpg" width="140" height="149" alt="Фото 2">
+            <img src="img/catalog-item-2.jpg" width="140" height="149" alt="Фото 2">
           </li>
           <li>
-            <img src="img/photo-3.jpg" width="140" height="149" alt="Фото 3">
+            <img src="img/catalog-item-3.jpg" width="140" height="149" alt="Фото 3">
           </li>
           <li>
-            <img src="img/photo-4.jpg" width="140" height="149" alt="Фото 4">
+            <img src="img/catalog-item-4.jpg" width="140" height="149" alt="Фото 4">
           </li>
         </ul>
       </div>
       <div class="product-info">
-        <h2 class="title-hidden">Описание товара</h2>
+        <h2 class="visually-hidden">Описание товара</h2>
         <span class="product-availability">Есть в наличии</span>
         <span class="product-article">Артикул: dexter-ae</span>
         <p class="product-text">Travel Kit – необходимый аксессуар во время любого путешествия. В аккуратной кожаной сумке находится все, что нужно для бритья и ухода за кожей во время рабочей поездки или отдыха: средство для умывания, увлажняющий крем, крем для бритья, крем после бритья, шампунь. Набор также может стать отличным подарком.</p>
@@ -104,11 +104,29 @@
         </div>
       </div>
     </footer>
-    <div class="modal modal-login">
+    <section class="modal  modal-login">
       <h2>Личный кабинет</h2>
-      <p>Введите свой логин и пароль.</p>
-      <!--Форма-->
-      <span class="modal-close">x</span>
-    </div>
+      <p>Введите пожалуйста свой логин и пароль</p>
+        <form class="modal-login-form" action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label class="visually-hidden" for="user-login">Логин</label>
+            <input type="text" name="login" id="user-login" placeholder="Логин">
+          </p>
+          <p>
+            <label class="visually-hidden" for="user-password">Пароль</label>
+            <input type="password" name="password" id="user-password" placeholder="Пароль">
+          </p>
+          <p>
+            <label class="login-checkbox">
+              <input class="visually-hidden" type="checkbox" name="remember" id="user-remember" checked>
+              <span class="checkbox-indicator"></span>
+              Запомните меня
+            </label>
+            <a class="restore" href="#">Я забыл пароль!</a>
+          </p>
+          <button class="btn" type="submit">Войти</button>
+        </form>
+      <button class="modal-close" type="button">Закрыть</button>
+    </section>
   </body>
 </html>

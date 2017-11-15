@@ -32,8 +32,9 @@
       </div>
     </header>
     <main class="container">
+      <h1 class="visually-hidden">Барбершоп «Бородинский»</h1>
       <div class="index-logo">
-        <img src="img/logo.png" width="368" height="204" alt="Барбершоп «Бородинский»">
+        <img src="img/index-logo.svg" width="370" height="153" alt="Логотип Барбершоп «Бородинский»">
       </div>
       <section class="features">
         <div class="features-item">
@@ -50,11 +51,11 @@
         </div>
       </section>
       <div class="index-content">
-        <div class="index-content-left">
+        <section class="index-content-left">
           <h2 class="index-content-title">Новости</h2>
           <ul class="news">
             <li>
-              <p>Нам наконец завезли Ягермайстер! Теперь вы можете пропустить стаканчик во вреНмя стрижки</p>
+              <p>Нам наконец завезли Ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки</p>
               <time datetime="2017-01-11">11 января</time>
             </li>
             <li>
@@ -63,22 +64,22 @@
             </li>
           </ul>
           <a class="btn" href="#">Все новости</a>
-        </div>
-        <div class="index-content-right">
+        </section>
+        <section class="index-content-right">
           <h2 class="index-content-title">Фотогалерея</h2>
           <div class="gallery">
             <figure>
               <a href="">
-                <img src="img/photo1.jpg" width="200" height="150" alt="">
+                <img src="img/photo-1.jpg" width="286" height="164" alt="Интерьер">
               </a>
             </figure>
-            <button class="btn  gallery-prev" type="button">Назад</button>
-            <button class="btn  gallery-next" type="button">Вперед</button>
+            <button class="btn  gallery-btm  gallery-prev" type="button">Назад</button>
+            <button class="btn  gallery-btm  gallery-next" type="button">Вперед</button>
           </div>
-        </div>
+        </section>
       </div>
       <div class="index-content">
-        <div class="index-content-left">
+        <section class="index-content-left">
           <h2 class="index-content-title">Контактная информация</h2>
           <p>
             Барбершоп «Бородинский»<br>
@@ -92,18 +93,30 @@
           </p>
           <a class="btn" href="#">Как проехать</a>
           <a class="btn" href="#">Обратная связь</a>
-        </div>
-        <div class="index-content-right">
+        </section>
+        <section class="index-content-right">
           <h2 class="index-content-title">Записаться</h2>
           <p>Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
           <form class="entry-form" action="https://echo.htmlacademy.ru" method="post">
-            <input type="text" name="data" value="" placeholder="Дата">
-            <input type="text" name="time" value="" placeholder="Время">
-            <input type="text" name="name" value="" placeholder="Ваше имя">
-            <input type="tel" name="phone" value="" placeholder="Телефон">
+            <p class="entry-item">
+              <label class="visually-hidden" for="entry-data">Дата</label>
+              <input type="text" name="data" id="entry-data" value="" placeholder="08.10.2017">
+            </p>
+            <p class="entry-item">
+              <label class="visually-hidden" for="entry-time">Время</label>
+              <input type="text" name="time" id="entry-time" value="" placeholder="10:00">
+            </p>
+            <p class="entry-item">
+              <label class="visually-hidden" for="entry-name">Ваше имя</label>
+              <input type="text" name="name" id="entry-name" value="" placeholder="Борода">
+            </p>
+            <p class="entry-item">
+              <label class="visually-hidden" for="entry-phone">Телефон</label>
+              <input type="tel" name="phone" id="entry-phone" value="" placeholder="+7 983 456-78-90">
+            </p>
             <button class="btn" type="submit">Отправить</button>
           </form>
-        </div>
+        </section>
       </div>
     </main>
     <footer class="main-footer">
@@ -126,16 +139,38 @@
         </div>
       </div>
     </footer>
-    <div class="modal modal-login">
+    <section class="modal  modal-login">
       <h2>Личный кабинет</h2>
-      <p>Введите свой логин и пароль.</p>
-      <!--Форма-->
-      <span class="modal-close">x</span>
-    </div>
-    <div class="modal modal-map">
-      <h2 class="title-hidden">Как до нас добраться</h2>
-      <!--Форма-->
-      <span class="modal-close">x</span>
-    </div>
+      <p>Введите пожалуйста свой логин и пароль</p>
+        <form class="modal-login-form" action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label class="visually-hidden" for="user-login">Логин</label>
+            <input type="text" name="login" id="user-login" placeholder="Логин">
+          </p>
+          <p>
+            <label class="visually-hidden" for="user-password">Пароль</label>
+            <input type="password" name="password" id="user-password" placeholder="Пароль">
+          </p>
+          <p>
+            <label class="login-checkbox">
+              <input class="visually-hidden" type="checkbox" name="remember" id="user-remember" checked>
+              <span class="checkbox-indicator"></span>
+              Запомните меня
+            </label>
+            <a class="restore" href="#">Я забыл пароль!</a>
+          </p>
+          <button class="btn" type="submit">Войти</button>
+        </form>
+      <button class="modal-close" type="button">Закрыть</button>
+    </section>
+    <section class="modal  modal-map">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <form class="modal-map-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <img src="img/map.jpg" width="766" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        </p>
+      </form>
+      <button class="mo dal-close" type="button">Закрыть</button>
+    </section>
   </body>
 </html>
