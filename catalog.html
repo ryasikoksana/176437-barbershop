@@ -3,15 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Барбершоп</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="inner-page">
     <header class="main-header">
       <div class="container">
         <nav class="main-nav">
           <a class="logo" href="index.html">
             <img src="img/logo.svg" width="111" height="24" alt="Логотип Барбершоп «Бородинский»">
           </a>
-          <ul>
+          <nav class="main-nav">
+          <ul class="site-nav">
             <li>
               <a href="#">Информация</a>
             </li>
@@ -28,10 +32,12 @@
               <a href="#">Контакты</a>
             </li>
           </ul>
+          <ul class="user-nav">
+            <li class="user-blok">
+              <a class="login" href="#">Вход</a>
+            </li>
+          </ul>
         </nav>
-        <div class="user-blok">
-          <a class="login" href="#">Вход</a>
-        </div>
       </div>
     </header>
     <main class="container">
@@ -56,7 +62,7 @@
                 <label for="brand1">BAXTER OF CALIFORNIA</label>
               </li>
               <li class="filter-option">
-                <input class="visually-hidden  filter-input  filter-input-checkbox" type="checkbox" name="brand2" id="brand2">
+                <input class="visually-hidden  filter-input  filter-input-checkbox" type="checkbox" name="brand2" id="brand2" disabled>
                 <label for="brand2">MR NATTY</label>
               </li>
               <li class="filter-option">
